@@ -40,11 +40,47 @@
 </header>
 
 <section class="container">
-  <img src="http://appinventor.mit.edu/explore/sites/all/files/Teach/media/image_8_ball.jpg" alt="a magic 8 ball">
+  <img src="http://appinventor.mit.edu/explore/sites/all/files/Teach/media/image_8_ball.jpg" alt="a magic 8 ball" onCLick="clicker()">
 
   <div>
-    <form>
-      <!-- TODO: Add a text field and submit button, attach a form handler function -->
+    <form onSubmit="magicBall()" name="questionForm">
+      <label>Ask me anything!<br>
+        <textarea name="question" rows="5"></textarea>
+      </label>
+      <input type="submit" value="Submit" name="submit"><!-- TODO: Add a text field and submit button, attach a form handler function -->
+    </form>
+    
+    <form onSubmit="insertAnswer()" name="answerForm">
+      <label>What would you like me to say?<br>
+        <input type="text" name="answer">
+      </label>
+      <input type="submit" value="Submit" name="I'll try!">
+    </form>
+    
+    <form onSubmit="removeAnswer()" name="removalForm">
+      What would you like me to never say?<br>
+      <label>absolutely
+        <input type="radio" name="remove" value="absolutely">
+      </label>
+      
+      <label>maybe
+        <input type="radio" name="remove" value="maybe">
+      </label>
+      
+      <label>in your wildest dreams
+        <input type="radio" name="remove" value="in your wildest dreams">
+      </label>
+      
+      <label>ask again later
+        <input type="radio" name="remove" value="ask again later">
+      </label>
+      
+      <label>off duty
+        <input type="radio" name="remove" value="off duty">
+      </label>
+      
+
+      <input type="submit" value="Submit" name="Nope">
     </form>
   </div>
 </section>
